@@ -37,16 +37,16 @@ namespace UI.Desktop
             this.lblComision = new System.Windows.Forms.Label();
             this.lblMateria = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.txtAnioCalendario = new System.Windows.Forms.TextBox();
             this.cbComision = new System.Windows.Forms.ComboBox();
             this.cbMateria = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtCupo = new System.Windows.Forms.TextBox();
+            this.cbAnioCalendario = new UI.Desktop.UserControls.ucAnios();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtCupo = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -157,13 +157,6 @@ namespace UI.Desktop
             this.txtID.Size = new System.Drawing.Size(152, 20);
             this.txtID.TabIndex = 8;
             // 
-            // txtAnioCalendario
-            // 
-            this.txtAnioCalendario.Location = new System.Drawing.Point(144, 63);
-            this.txtAnioCalendario.Name = "txtAnioCalendario";
-            this.txtAnioCalendario.Size = new System.Drawing.Size(152, 20);
-            this.txtAnioCalendario.TabIndex = 9;
-            // 
             // cbComision
             // 
             this.cbComision.FormattingEnabled = true;
@@ -193,11 +186,11 @@ namespace UI.Desktop
             this.tableLayoutPanel2.Controls.Add(this.lblComision, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.lblMateria, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.txtCupo, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtAnioCalendario, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.cbComision, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.cbMateria, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.btnAceptar, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.btnCancelar, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.cbAnioCalendario, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 26);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -210,6 +203,20 @@ namespace UI.Desktop
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(302, 184);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // txtCupo
+            // 
+            this.txtCupo.Location = new System.Drawing.Point(144, 33);
+            this.txtCupo.Name = "txtCupo";
+            this.txtCupo.Size = new System.Drawing.Size(152, 20);
+            this.txtCupo.TabIndex = 10;
+            // 
+            // cbAnioCalendario
+            // 
+            this.cbAnioCalendario.Location = new System.Drawing.Point(144, 63);
+            this.cbAnioCalendario.Name = "cbAnioCalendario";
+            this.cbAnioCalendario.Size = new System.Drawing.Size(152, 21);
+            this.cbAnioCalendario.TabIndex = 14;
             // 
             // panelTitulo
             // 
@@ -266,13 +273,6 @@ namespace UI.Desktop
             this.panel2.Size = new System.Drawing.Size(302, 184);
             this.panel2.TabIndex = 12;
             // 
-            // txtCupo
-            // 
-            this.txtCupo.Location = new System.Drawing.Point(144, 33);
-            this.txtCupo.Name = "txtCupo";
-            this.txtCupo.Size = new System.Drawing.Size(152, 20);
-            this.txtCupo.TabIndex = 10;
-            // 
             // CursoDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,7 +305,6 @@ namespace UI.Desktop
         private System.Windows.Forms.Label lblComision;
         private System.Windows.Forms.Label lblMateria;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.TextBox txtAnioCalendario;
         private System.Windows.Forms.ComboBox cbComision;
         private System.Windows.Forms.ComboBox cbMateria;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -315,5 +314,6 @@ namespace UI.Desktop
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.TextBox txtCupo;
+        private UserControls.ucAnios cbAnioCalendario;
     }
 }

@@ -39,7 +39,7 @@ namespace UI.Desktop
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.cbPlan = new System.Windows.Forms.ComboBox();
-            this.txtAnioEspecialidad = new System.Windows.Forms.TextBox();
+            this.CBAnioEspecialidad = new UI.Desktop.UserControls.ucAnios();
             this.panelTitulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -66,7 +66,7 @@ namespace UI.Desktop
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtDescripcion, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.cbPlan, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.txtAnioEspecialidad, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CBAnioEspecialidad, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -187,13 +187,13 @@ namespace UI.Desktop
             this.cbPlan.Size = new System.Drawing.Size(155, 21);
             this.cbPlan.TabIndex = 10;
             // 
-            // txtAnioEspecialidad
+            // CBAnioEspecialidad
             // 
-            this.txtAnioEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtAnioEspecialidad.Location = new System.Drawing.Point(144, 33);
-            this.txtAnioEspecialidad.Name = "txtAnioEspecialidad";
-            this.txtAnioEspecialidad.Size = new System.Drawing.Size(155, 20);
-            this.txtAnioEspecialidad.TabIndex = 11;
+            this.CBAnioEspecialidad.Anio = 0;
+            this.CBAnioEspecialidad.Location = new System.Drawing.Point(144, 33);
+            this.CBAnioEspecialidad.Name = "CBAnioEspecialidad";
+            this.CBAnioEspecialidad.Size = new System.Drawing.Size(155, 22);
+            this.CBAnioEspecialidad.TabIndex = 11;
             // 
             // panelTitulo
             // 
@@ -286,11 +286,11 @@ namespace UI.Desktop
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ComboBox cbPlan;
-        private System.Windows.Forms.TextBox txtAnioEspecialidad;
         private System.Windows.Forms.Panel panelTitulo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
+        private UserControls.ucAnios CBAnioEspecialidad;
     }
 }

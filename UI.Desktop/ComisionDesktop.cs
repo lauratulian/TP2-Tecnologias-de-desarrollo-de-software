@@ -60,7 +60,7 @@ namespace UI.Desktop
         {
             this.txtID.Text = this.ComisionActual.ID.ToString();
             this.txtDescripcion.Text = this.ComisionActual.Descripcion;
-            this.txtAnioEspecialidad.Text = this.ComisionActual.AnioEspecialidad.ToString();
+            this.CBAnioEspecialidad.Text = this.ComisionActual.AnioEspecialidad.ToString();
             this.cbPlan.SelectedValue = this.ComisionActual.IDPlan;
             String botonAceptar;
             switch (Modo)
@@ -103,7 +103,7 @@ namespace UI.Desktop
                         Comision com = new Comision();
                         ComisionActual = com;
                         this.ComisionActual.Descripcion = this.txtDescripcion.Text;
-                        this.ComisionActual.AnioEspecialidad = int.Parse(this.txtAnioEspecialidad.Text);
+                        this.ComisionActual.AnioEspecialidad = this.CBAnioEspecialidad.Anio;
                         this.ComisionActual.IDPlan = int.Parse(this.cbPlan.SelectedValue.ToString());
                         ComisionActual.State = BusinessEntity.States.New;
                         break;
@@ -112,7 +112,7 @@ namespace UI.Desktop
                     {
                         this.ComisionActual.ID = int.Parse(txtID.Text);
                         this.ComisionActual.Descripcion = this.txtDescripcion.Text;
-                        this.ComisionActual.AnioEspecialidad = int.Parse(this.txtAnioEspecialidad.Text);
+                        this.ComisionActual.AnioEspecialidad = this.CBAnioEspecialidad.Anio;
                         this.ComisionActual.IDPlan = int.Parse(this.cbPlan.SelectedValue.ToString());
                         ComisionActual.State = BusinessEntity.States.Modified;
                         break;
@@ -132,14 +132,6 @@ namespace UI.Desktop
             if (String.IsNullOrEmpty(this.txtDescripcion.Text))
             {
                 mensaje = "Campo descripcion requerido. \n";
-            }
-            if (String.IsNullOrEmpty(this.txtAnioEspecialidad.Text))
-            {
-                mensaje += "Campo año especialidad requerido. \n";
-            }
-            else if (!Validaciones.EsNumeroValido(this.txtAnioEspecialidad.Text))
-            {
-                mensaje += "No se permiten letras en el campo de año especialidad. \n";
             }
             if (String.IsNullOrEmpty(mensaje))
             {

@@ -76,7 +76,7 @@ namespace UI.Desktop
         public override void MapearDeDatos()
         {
             this.txtID.Text = this.CursoActual.ID.ToString();
-            this.txtAnioCalendario.Text = this.CursoActual.AnioCalendario.ToString();
+            this.cbAnioCalendario.Text = this.CursoActual.AnioCalendario.ToString();
             this.txtCupo.Text = this.CursoActual.Cupo.ToString();
             this.cbMateria.SelectedValue = this.CursoActual.IDMateria;
             this.cbComision.SelectedValue = this.CursoActual.IDComision;
@@ -120,7 +120,7 @@ namespace UI.Desktop
                     {
                         Curso cur = new Curso();
                         CursoActual = cur;
-                        this.CursoActual.AnioCalendario = int.Parse(this.txtAnioCalendario.Text);
+                        this.CursoActual.AnioCalendario =this.cbAnioCalendario.Anio;
                         this.CursoActual.Cupo = int.Parse(this.txtCupo.Text);
                         this.CursoActual.IDMateria = int.Parse(this.cbMateria.SelectedValue.ToString());
                         this.CursoActual.IDComision = int.Parse(this.cbComision.SelectedValue.ToString());
@@ -130,7 +130,7 @@ namespace UI.Desktop
                 case ModoForm.Modificacion:
                     {
                         this.CursoActual.ID = int.Parse(txtID.Text);
-                        this.CursoActual.AnioCalendario = int.Parse(this.txtAnioCalendario.Text);
+                        this.CursoActual.AnioCalendario = this.cbAnioCalendario.Anio;
                         this.CursoActual.Cupo = int.Parse(this.txtCupo.Text);
                         this.CursoActual.IDMateria = int.Parse(this.cbMateria.SelectedValue.ToString());
                         this.CursoActual.IDComision = int.Parse(this.cbComision.SelectedValue.ToString());
@@ -149,14 +149,6 @@ namespace UI.Desktop
         public override bool Validar()
         {
             String mensaje = null;
-            if (String.IsNullOrEmpty(this.txtAnioCalendario.Text))
-            {
-                mensaje = "Campo año calendario requerido. \n";
-            }
-            else if (Validaciones.EsNumeroValido(this.txtAnioCalendario.Text))
-            {
-                mensaje = "No se pueden ingresar letras en el año calendario. \n";
-            }
             if (String.IsNullOrEmpty(this.txtCupo.Text))
             {
                 mensaje += "Campo cupo requerido. \n";
