@@ -179,6 +179,13 @@ namespace UI.Desktop
             {
                 mensaje += "Campo Telefono requerido. \n";
             }
+            else if (!Validaciones.EsNumeroValido(this.txtTelefono.Text))
+            {
+                mensaje += "No se pueden agregar letras en el nro de telefono. \n";
+            }
+            {
+
+            }
             if (String.IsNullOrEmpty(this.txtLegajo.Text))
             {
                 mensaje += "Campo Legajo requerido. \n";

@@ -259,7 +259,7 @@ namespace UI.Desktop
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DocenteDesktop";
             this.Text = "DoncenteDesktop";
             this.Load += new System.EventHandler(this.DocenteDesktop_Load);

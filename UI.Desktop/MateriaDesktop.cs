@@ -138,9 +138,17 @@ namespace UI.Desktop
             {
                 mensaje += "Campo Horas Semanales requerido. \n";
             }
+            else if (!Validaciones.EsNumeroValido(this.txtHSSemanales.Text))
+            {
+                mensaje = "No se pueden ingresar letras en las HS Semanales. \n";
+            }
             if (String.IsNullOrEmpty(this.txtHSTotales.Text))
             {
                 mensaje += "Campo Horas Totales requerido. \n";
+            }
+            else if (!Validaciones.EsNumeroValido(this.txtHSTotales.Text))
+            {
+                mensaje = "No se pueden ingresar letras en las HS Totales. \n";
             }
 
             if (String.IsNullOrEmpty(mensaje))

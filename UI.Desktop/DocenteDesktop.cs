@@ -138,10 +138,20 @@ namespace UI.Desktop
             {
                 mensaje = "Campo cargo requerido. \n";
             }
+            else if (!Validaciones.EsNumeroValido(this.txtCargo.Text))
+            {
+                mensaje = "No se pueden ingresar letras en el cargo. \n";
+            }
+
             if (String.IsNullOrEmpty(this.txtIDDocente.Text))
             {
                 mensaje += "Campo ID docente requerido. \n";
             }
+            else if (!Validaciones.EsNumeroValido(this.txtIDDocente.Text))
+            {
+                mensaje = "No se pueden ingresar letras en el ID Docente. \n";
+            }
+
             if (String.IsNullOrEmpty(mensaje))
             {
                 return true;

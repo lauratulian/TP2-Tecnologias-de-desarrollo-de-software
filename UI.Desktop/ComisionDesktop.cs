@@ -137,6 +137,10 @@ namespace UI.Desktop
             {
                 mensaje += "Campo año especialidad requerido. \n";
             }
+            else if (!Validaciones.EsNumeroValido(this.txtAnioEspecialidad.Text))
+            {
+                mensaje += "No se permiten letras en el campo de año especialidad. \n";
+            }
             if (String.IsNullOrEmpty(mensaje))
             {
                 return true;

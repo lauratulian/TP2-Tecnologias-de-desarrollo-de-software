@@ -153,9 +153,17 @@ namespace UI.Desktop
             {
                 mensaje = "Campo año calendario requerido. \n";
             }
+            else if (Validaciones.EsNumeroValido(this.txtAnioCalendario.Text))
+            {
+                mensaje = "No se pueden ingresar letras en el año calendario. \n";
+            }
             if (String.IsNullOrEmpty(this.txtCupo.Text))
             {
                 mensaje += "Campo cupo requerido. \n";
+            }
+            else if (!Validaciones.EsNumeroValido(this.txtCupo.Text))
+            {
+                mensaje = "No se pueden ingresar letras en el cupo. \n";
             }
             if (String.IsNullOrEmpty(mensaje))
             {
