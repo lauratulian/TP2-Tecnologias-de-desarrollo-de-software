@@ -1,4 +1,4 @@
-# Sistema de Gestión Académica tipo Campus Universitario
+# Sistema de Gestión Académica 
 
 Este proyecto tiene como objetivo el desarrollo de un **sistema de gestión académica** para una institución educativa, con funcionalidades orientadas al manejo de personas, usuarios, planes de estudio, materias, cursos e inscripciones.
 
