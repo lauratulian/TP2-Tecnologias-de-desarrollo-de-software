@@ -1,57 +1,127 @@
 # Sistema de Gestión Académica 
 
-Este proyecto tiene como objetivo el desarrollo de un **sistema de gestión académica** para una institución educativa, con funcionalidades orientadas al manejo de personas, usuarios, planes de estudio, materias, cursos e inscripciones.
+Este proyecto corresponde al **Trabajo Práctico Nº2 (TP2)** de la asignatura **Tecnologías de Desarrollo de Software** de la **UTN Rosario**. Tiene como finalidad aplicar los conceptos abordados durante el cursado mediante el desarrollo de un sistema real, estructurado en capas y compuesto por múltiples proyectos conectados entre sí.
 
-Está compuesto por dos aplicaciones complementarias:
+## 📘 Presentación
 
-- Una **aplicación de consola**, orientada a pruebas o administración básica del sistema.
-- Una **aplicación de escritorio (Windows Forms)** que brinda una interfaz gráfica completa para el usuario final.
+El objetivo del trabajo es implementar una versión simplificada de un **Sistema de Gestión Académica **, el cual permite registrar y administrar las actividades académicas de una universidad, contemplando entidades clave como alumnos, profesores, materias, planes de estudio e inscripciones.
 
-El sistema fue desarrollado en **C#**, siguiendo una **arquitectura en capas** que separa responsabilidades de forma clara (entidades, lógica, acceso a datos, interfaz). Esto permite una mayor escalabilidad, mantenimiento y reutilización del código.
+La solución está compuesta por varios **proyectos conectados (referenciados)** entre ellos, cumpliendo con una **arquitectura multicapa**:
 
-Este proyecto fue realizado en la cátedra de **Tecnologías de Desarrollo de Software** de la **UTN Rosario** por **Ramiro Cordoba, Laura Tulian, Juan Cruz Vazquez,**.
+- Capa de Presentación (Web y Desktop)
+- Capa de Negocios
+- Capa de Datos
+- Componentes Transversales (Entidades y Utilidades)
 
-## 🧾 Objetivo
+## 🏫 Modelo de Aplicación
 
-Desarrollar un sistema funcional para la administración de un campus universitario, permitiendo la gestión de:
+El sistema permite gestionar:
 
-- Alumnos y sus inscripciones.
-- Docentes y asignación a cursos.
-- Materias, planes de estudio, comisiones y especialidades.
-- Usuarios con distintos permisos y roles.
+- **Personas**: Alumnos y Profesores, con datos comunes (legajo, nombre, apellido, dirección).
+- **Materias**: Vinculadas a un Plan, con carga horaria.
+- **Planes**: Asociados a una Especialidad.
+- **Cursos**: Creados anualmente, vinculados a una Comisión, con cupo limitado.
+- **Docentes en Cursos**: Asignación con distintos cargos.
+- **Inscripciones**: Permite a los alumnos inscribirse en cursos con cupo disponible.
 
-## 🧩 Estructura del Sistema
+### 📌 Diagrama del Modelo de Dominio
 
-Las principales entidades del sistema incluyen:
 
-- `Usuario`: gestiona credenciales y permisos de acceso.
-- `Persona`: base común para alumnos, docentes y administrativos.
-- `Materia`, `Curso`, `Comision`, `Plan`, `Especialidad`: componentes del plan académico.
-- `AlumnoInscripciones`: gestiona las inscripciones de alumnos a cursos.
-- `DocenteCurso`: relaciona docentes con cursos y cargos.
-- `Modulo` y `ModuloUsuario`: manejan el control de acceso por funcionalidad.
-- `Cargos`: define los tipos de asignaciones docentes.
+## ✅ Funcionalidades Implementadas
 
-## 🚀 Características Principales
+- ABMC (Alta, Baja, Modificación, Consulta) de:
+  - Usuarios
+  - Alumnos
+  - Profesores
+  - Especialidades
+  - Planes y Materias
+  - Comisiones
+  - Cursos
+- Inscripción de alumnos a cursos con control de cupo
+- Registro de notas
+- Reportes de cursos y planes (exportables a PDF)
+- Autenticación de acceso por usuario y contraseña
 
-- Aplicación de **consola** para interacción básica y pruebas.
-- Aplicación de **escritorio (WinForms)** con interfaz amigable.
-- Validación de datos y lógica centralizada.
-- Separación clara en capas:
-  - `Business.Entities` – Modelo de datos.
-  - `Business.Logic` – Lógica del negocio.
-  - `Data.Database` – Acceso a base de datos.
-  - `UI.Desktop` – Interfaz gráfica.
-  - `UI.Consola` – Interfaz por consola.
+---
 
-## 🛠 Tecnologías Utilizadas
+## 🧱 Arquitectura y Requerimientos Técnicos
 
-- **Lenguaje:** C#
-- **Framework:** .NET Framework
-- **Base de datos:** SQL Server
-- **Diseño:** Arquitectura en Capas / MVC lógico
+### 🖥️ Capa de Presentación
+
+#### Web (ASP.NET MVC)
+- Aplicación desarrollada en **ASP.NET MVC**
+- Implementación de **Layouts**, **Partial Views**, y hojas de estilo (CSS)
+- Validaciones del lado del **cliente (JavaScript)** y del **servidor**
+- Generación de reportes **exportables a PDF**
+- Control de acceso mediante **login (autenticación)**
+- Menú de navegación general
+
+#### Escritorio (Windows Forms)
+- Aplicación de escritorio desarrollada en **Windows Forms**
+- Implementación de **login** para autenticación
+- Menú principal con acceso a todas las funcionalidades
+
+---
+
+### 🧠 Capa de Negocios
+- Implementación de reglas de negocio específicas (por ejemplo, validación de cupo antes de inscripción)
+- Generación de **excepciones personalizadas** ante errores de validación
+
+---
+
+### 🗄️ Capa de Datos
+- Persistencia mediante **SQL Server**
+- Acceso a datos centralizado
+- Uso de **ADO.NET** o **Entity Framework**
+- Posibilidad de uso de **Stored Procedures**
+- Implementación de **transacciones** para operaciones compuestas (Planes y Materias, Usuarios y Permisos)
+
+---
+
+### 🔄 Componentes Transversales
+
+#### Entidades
+- Implementadas como **clases orientadas a objetos**, con uso de **colecciones tipadas**
+
+#### Proyecto Utilidades
+- Clases reutilizables comunes al sistema (por ejemplo: validaciones, conversores, manejo de errores)
+- Implementación opcional de **log de errores**
+
+---
+
+### 🛡️ Requerimientos Técnicos Adicionales 
+
+- ✅ Log de errores en archivo o base de datos (Utilidades)
+- ✅ Uso de transacciones para ABMC compuestos
+- ✅ Control de acceso por módulo (autorización)
+- ✅ Uso de Stored Procedures o frameworks ORM (Entity Framework / NHibernate)
+
+---
+
+## 🧼 Buenas Prácticas Aplicadas
+
+- Uso consistente de **nomenclatura estandarizada**
+- Separación lógica de responsabilidades por capas y proyectos
+- **Comentarios explicativos** en zonas clave del código
+- Reutilización de código a través de clases utilitarias
+- Aplicación de principios de **POO** y diseño limpio
+
+---
+
 
 ## 📸 Capturas 
 
 >
 
+## 🛠 Herramientas Utilizadas
+
+Para la realización de este Trabajo Práctico se emplearon diversas herramientas y tecnologías, que se detallan a continuación:
+
+- **Entorno de Desarrollo:**  
+  Microsoft Visual Studio Community 2019 (Versión 16.11.3)  
+- **Framework:**  
+  Microsoft .NET Framework (Versión 4.7.2)  
+- **Sistema de Gestión de Base de Datos:**  
+  Microsoft SQL Server Management Studio (SSMS) (Versión 18.9.2)  
+- **Motor de Base de Datos:**  
+  Microsoft SQL Server 2019 (Versión 15.0.2000.5)  
