@@ -27,6 +27,7 @@ El sistema permite gestionar:
 ### 📌 Diagrama del Modelo de Dominio
 
 
+
 ## ✅ Funcionalidades Implementadas
 
 - ABMC (Alta, Baja, Modificación, Consulta) de:
@@ -111,7 +112,14 @@ El sistema permite gestionar:
 
 ## 📸 Capturas 
 
->
+>### Formulario de Inicio de Sesión
+![Inicio de Sesión](https://github.com/lauratulian/TP2-Tecnologias-de-desarrollo-de-software/blob/master/Login.png)
+
+### Interfaz Principal Administrador
+![Pantalla Principal](https://github.com/lauratulian/TP2-Tecnologias-de-desarrollo-de-software/blob/master/Principal.png)
+
+### Generacion de Reportes
+![Generacion de Reportes](https://github.com/lauratulian/TP2-Tecnologias-de-desarrollo-de-software/blob/master/Reportes.png)
 
 ## 🛠 Herramientas Utilizadas
 
