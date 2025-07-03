@@ -1,6 +1,6 @@
 # Sistema de Gestión Académica 
 
-Este proyecto corresponde al **Trabajo Práctico Nº2 (TP2)** de la asignatura **Tecnologías de Desarrollo de Software** de la **UTN Rosario**. Tiene como finalidad aplicar los conceptos abordados durante el cursado mediante el desarrollo de un sistema real, estructurado en capas y compuesto por múltiples proyectos conectados entre sí.
+Este proyecto corresponde al **Trabajo Práctico Nº2 ** de la asignatura **Tecnologías de Desarrollo de Software** de la **UTN Rosario**. Tiene como finalidad aplicar los conceptos abordados durante el cursado mediante el desarrollo de un sistema real, estructurado en capas y compuesto por múltiples proyectos conectados entre sí.
 
 ## 📘 Presentación
 
@@ -24,9 +24,10 @@ El sistema permite gestionar:
 - **Docentes en Cursos**: Asignación con distintos cargos.
 - **Inscripciones**: Permite a los alumnos inscribirse en cursos con cupo disponible.
 
-### 📌 Diagrama del Modelo de Dominio
+### 📌 Diagrama del Modelo de Datos
 
-
+>### Diagrama del Modelo de Datos
+![Modelo de Datos](https://github.com/lauratulian/TP2-Tecnologias-de-desarrollo-de-software/blob/master/Modelo.png)
 
 ## ✅ Funcionalidades Implementadas
 
@@ -109,10 +110,9 @@ El sistema permite gestionar:
 
 ---
 
-
 ## 📸 Capturas 
 
->### Formulario de Inicio de Sesión
+### Formulario de Inicio de Sesión
 ![Inicio de Sesión](https://github.com/lauratulian/TP2-Tecnologias-de-desarrollo-de-software/blob/master/Login.png)
 
 ### Interfaz Principal Administrador
@@ -120,6 +120,9 @@ El sistema permite gestionar:
 
 ### Generacion de Reportes
 ![Generacion de Reportes](https://github.com/lauratulian/TP2-Tecnologias-de-desarrollo-de-software/blob/master/Reportes.png)
+
+---
+
 
 ## 🛠 Herramientas Utilizadas
 
