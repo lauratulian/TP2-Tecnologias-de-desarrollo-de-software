@@ -24,10 +24,6 @@ El sistema permite gestionar:
 - **Docentes en Cursos**: Asignación con distintos cargos.
 - **Inscripciones**: Permite a los alumnos inscribirse en cursos con cupo disponible.
 
-### 📌 Diagrama del Modelo de Datos
-
->### Diagrama del Modelo de Datos
-![Modelo de Datos](https://github.com/lauratulian/TP2-Tecnologias-de-desarrollo-de-software/blob/master/Modelo.png)
 
 ## ✅ Funcionalidades Implementadas
 
